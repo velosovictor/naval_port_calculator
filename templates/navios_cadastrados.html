@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTWARE NAVAL</title>
+    <link href="{{ url_for('static', path='/index.css') }}" rel="stylesheet">
+    <!-- <link href="index.css" rel="stylesheet"> -->
+</head>
+
+{% include 'navbar.html' %}
+
+<body>
+    {% for item in navios %}
+    <h2>NAVIO: {{item.navio_parametro_01}}</h2>
+    <div class="container-nivel-01-tipo-01">
+
+        <div class="container-nivel-02-tipo-01">
+            <div class="container-nivel-03-tipo-01">
+                <div class="container-nivel-04-tipo-01">DADOS DO NAVIO</div>
+
+                <div class="container-nivel-04-tipo-02">IDENTIFICAÇÃO DO NAVIO</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_01}}</div>
+
+                <div class="container-nivel-04-tipo-02">COMPRIMENTO TOTAL DO NAVIO (LOA) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_02}}</div>
+
+                <div class="container-nivel-04-tipo-02">BOCA (B) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_03}}</div>
+
+                <div class="container-nivel-04-tipo-02">PONTAL (D) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_04}}</div>
+
+                <div class="container-nivel-04-tipo-02">CALADO (T) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_05}}</div>
+
+                <div class="container-nivel-04-tipo-02" id="large">POSIÇÃO LONGITUDINAL DO CENTRO DE GRAVIDADE EM RELAÇÃO À POPA (LCG) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_06}}</div>
+
+                <div class="container-nivel-04-tipo-02" id="large">POSIÇÃO LONGITUDINAL DO CENTRÓIDE DA ÁREA LATERAL DA OBRA MORTA (LOBMORTA) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_07}}</div>
+
+                <div class="container-nivel-04-tipo-02" id="large">POSIÇÃO LONGITUDINAL DO CENTRÓIDE DA ÁREA LATERAL DA OBRA VIVA (LOBVIVA) [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_08}}</div>
+
+                <div class="container-nivel-04-tipo-02">ÁREA TRANSVERSAL DA OBRA MORTA [M2]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_09}}</div>
+
+                <div class="container-nivel-04-tipo-02">ÁREA LONGITUDINAL DA OBRA MORTA [M2]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_10}}</div>
+
+                <div class="container-nivel-04-tipo-02">ÁREA TRANSVERSAL DA OBRA VIVA [M2]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_11}}</div>
+
+                <div class="container-nivel-04-tipo-02">ÁREA LONGITUDINAL DA OBRA VIVA [M2]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_12}}</div>
+
+                <div class="container-nivel-04-tipo-02">PROFUNDIDADE DO CAIS [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_13}}</div>
+
+                <div class="container-nivel-04-tipo-02">PROFUNDIDADE NA MARÉ MÍNIMA [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_14}}</div>
+                
+                <div class="container-nivel-04-tipo-02">MARÉ INGRESSO [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_15}}</div>
+
+                <div class="container-nivel-04-tipo-02">MARÉ MÍNIMA [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_16}}</div>
+
+                <div class="container-nivel-04-tipo-02">MARÉ MÁXIMA [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_17}}</div>
+
+                <div class="container-nivel-04-tipo-02">VELOCIDADE DO VENTO [M/S]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_18}}</div>
+
+                <div class="container-nivel-04-tipo-02">DENSIDADE DO AR [KG/M3]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_19}}</div>
+
+                <div class="container-nivel-04-tipo-02">ÂNGULO DE INCIDÊNDIA DO VENTO [GRAUS]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_20}}</div>
+
+                <div class="container-nivel-04-tipo-02">VELOCIDADE DA CORRENTEZA [M/S]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_21}}</div>
+
+                <div class="container-nivel-04-tipo-02">DENSIDADE DA ÁGUA [KG/M3]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_22}}</div>
+
+                <div class="container-nivel-04-tipo-02">ÂNGULO DE INCIDÊNCIA DA CORRENTEZA [GRAUS]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_23}}</div>
+
+                <div class="container-nivel-04-tipo-02">XDEF [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_24}}</div>
+
+                <div class="container-nivel-04-tipo-02">YDEF [M]</div>
+                <div class="container-nivel-04-tipo-03">{{item.navio_parametro_25}}</div>
+            </div>
+        </div>
+    {% endfor %}
+
+
+        <div class="container-nivel-02-tipo-02">
+            <div class="container-nivel-03-tipo-02">
+                <div class="container-nivel-04-tipo-05">COORDENADAS</div>
+
+                <div class="container-nivel-04-tipo-06" id="large2">N° DO ELEMENTO</div>
+                <div class="container-nivel-04-tipo-06">TIPO</div>
+                <div class="container-nivel-04-tipo-06">XN</div>
+                <div class="container-nivel-04-tipo-06">YN</div>
+                <div class="container-nivel-04-tipo-06">ZN</div>
+                <div class="container-nivel-04-tipo-06">XB</div>
+                <div class="container-nivel-04-tipo-06">YB</div>
+                <div class="container-nivel-04-tipo-06">ZB</div>
+
+                <div class="container-nivel-04-tipo-06">01</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">02</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">03</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">04</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">05</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">06</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">07</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">08</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">09</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">10</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">11</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">12</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">13</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">14</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">15</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">16</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+
+
+                <div class="container-nivel-04-tipo-08"></div>
+                <div class="container-nivel-04-tipo-07">COEFICIENTES DE VENTO</div>
+
+                <div class="container-nivel-04-tipo-06">ÂNGULO [graus]</div>
+                <div class="container-nivel-04-tipo-06">CX</div>
+                <div class="container-nivel-04-tipo-06">CY</div>
+                <div class="container-nivel-04-tipo-06">CN</div>
+                <div class="container-nivel-04-tipo-06">ÂNGULO [graus]</div>
+                <div class="container-nivel-04-tipo-06">CX</div>
+                <div class="container-nivel-04-tipo-06">CY</div>
+                <div class="container-nivel-04-tipo-06">CN</div>
+
+                <div class="container-nivel-04-tipo-06">0</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">100</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">10</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">110</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">20</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">120</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">30</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">130</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">40</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">140</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">50</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">150</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">60</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">160</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">70</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">170</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">80</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-06">180</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+
+                <div class="container-nivel-04-tipo-06">90</div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+                <div class="container-nivel-04-tipo-02"></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+</body>
+
+</html>

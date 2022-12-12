@@ -1,0 +1,334 @@
+
+html {
+    /*CORES*/
+    --azul: #02046dfd;
+    --amarelo: rgb(254, 205, 9);
+    --amarelo2:#ffbc04f6;
+    --cinza1: rgb(212, 212, 212);
+    --cinza2: #c5c2b4a8;
+    --cinza3: rgb(30, 30, 30);
+    /**/
+    --colnumberheader: 2;
+    --rowsnumber: 26;
+    --border_radius: 0.5rem;
+    --grid_gap: 0.08rem;
+    --border: 0.3rem solid black;
+    --border2: 0.3rem solid white;
+    /* --border3: 0.3rem solid var(--amarelo); */
+    --font-family: "Arial Black", "Rockwell Extra Bold", sans-serif;
+    font-size: 12px;
+}
+
+body {
+    background-color: var(--azul);
+    color: black;
+    font-family: var(--font-family);
+    margin: 0;
+    letter-spacing: 0.0rem;
+    font-size: 1rem;
+    font-weight: 900;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin:  0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+    padding: 0.5rem 0.0rem 0.5rem 0.0rem;  /* top | right | bottom | left */
+    width: 100%;
+    border-radius: var(--border_radius);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    margin:  0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+    padding: 0.5rem 0.0rem 0.5rem 0.0rem;  /* top | right | bottom | left */
+    width: 100%;
+    color: black;
+    background-color: var(--amarelo2);
+    font-size: 2rem;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin:  0.0rem 0.0rem 2.0rem ;  /* top | right | bottom | left */
+    padding: 0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    border: var(--border2);
+}
+
+li {
+    float: left;
+    font-weight: 900;
+    border-right :var(--border2);
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+li a:hover {
+    background-color: var(--cinza3);
+    color: white;
+}
+
+div a {
+    color: black;
+    text-decoration: none;
+}
+
+div a:hover {
+    background-color: var(--cinza3);
+    color: white;
+}
+
+.container-nivel-01-tipo-01 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(var(--rowsnumber)); */
+    display: grid;
+    margin:  0.0rem 1.0rem 0.0rem 1.0rem;  /* top | right | bottom | left */
+    padding: 0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+    grid-gap: var(--grid_gap);
+    letter-spacing: 0.0rem;
+    font-size: 0.85rem;
+    font-weight: 900;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: black;
+    font-family: var(--font-family);
+    text-align: left;
+}
+
+.container-nivel-02-tipo-01 {
+    grid-column: 1 / 2;
+}
+
+.container-nivel-02-tipo-02 {
+    grid-column: 2 / 4;
+}
+
+.container-nivel-02-tipo-03 {
+    grid-column: 2 / 3;
+}
+
+.container-nivel-03-tipo-01 > div {
+    display: flex;
+}
+
+.container-nivel-03-tipo-02 > div {
+    display: flex;
+}
+
+.container-nivel-03-tipo-01 {
+    background-color: var(--cinza2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    /* grid-template-columns: repeat(var(--colnumberheader), 1fr); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(26, 4rem);
+    border-radius: var(--border_radius);
+    margin:  1.0rem 2.0rem 1.0rem 0.0rem;  /* top | right | bottom | left */
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;  /* top | right | bottom | left */
+    border: var(--border)
+}
+
+.container-nivel-03-tipo-02 {
+    background-color: var(--cinza2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(31, 4rem);
+    border-radius: var(--border_radius);
+    margin:  1.0rem 2.0rem 1.0rem 0.0rem;  /* top | right | bottom | left */
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;  /* top | right | bottom | left */
+    border: var(--border)
+}
+
+.container-nivel-04-tipo-01 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:var(--amarelo2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-column: span 2;
+    grid-row: 1/2;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.container-nivel-04-tipo-02 {
+    background-color: var(--cinza2);
+    font-size: 1rem;
+    text-align: left;
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-template-columns: 1fr;
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+#large {
+    font-size: 0.8rem;
+}
+
+#large2 {
+    font-size: 1.2rem;
+}
+
+.container-nivel-04-tipo-03 {
+    /* width: 100%; */
+    background-color: var(--cinza1);
+    font-size: 1rem;
+    text-align: center;
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-template-columns: 1fr;
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.input {
+    width: 100%;
+    height: auto;
+    background-color: var(--cinza1);
+    font-size: 1rem;
+    text-align: left;
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-template-columns: 1fr;
+    border: var(--border);
+    border-radius: var(--border_radius);
+    margin:  0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+    padding: 0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+}
+
+.container-nivel-04-tipo-04 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:var(--amarelo2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-column: span 8;
+    grid-row: 1/2;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.container-nivel-04-tipo-05 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:var(--amarelo2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-column: span 8;
+    grid-row: 1/2;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.container-nivel-04-tipo-06 {
+    background-color: var(--amarelo2);
+    font-size: 1.4rem;
+    text-align: center;
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-template-columns: 1fr;
+    border: var(--border);
+    border-radius: var(--border_radius);
+    margin:  0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+    padding: 0.0rem 0.0rem 0.0rem 0.0rem;  /* top | right | bottom | left */
+}
+
+.container-nivel-04-tipo-08 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:var(--cinza2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-column: span 8;
+    grid-row: 19/20;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.container-nivel-04-tipo-07 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:var(--amarelo2);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-column: span 8;
+    grid-row: 20/21;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.divisor {
+    display: grid;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+}
+
+.input {
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-template-columns: 1fr;
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+button {
+    background-color:var(--azul);
+    margin:  0.0em 0.0em 1.0em 0.0em;  /* top | right | bottom | left */
+    padding: 0.0em 0.5em 0.0em 0.5em;  /* top | right | bottom | left */
+    width: 1fr;
+    border: var(--border2);
+    border-radius: var(--border_radius);
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+}
+
+button:hover {
+    background-color: var(--cinza3);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--amarelo);
+    color: black;
+}
+
+
+.imagem {
+    background-color:var(--cinza1);
+    display: grid;
+    grid-gap: var(--grid_gap);
+    grid-column: span 2;
+    grid-row: 1/5;
+    grid-template-columns: repeat(var(--colnumberheader), 1fr);
+    border: var(--border);
+    border-radius: var(--border_radius);
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    display:block;
+}
